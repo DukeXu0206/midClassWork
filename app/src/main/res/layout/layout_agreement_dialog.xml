@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#00FFFFFF"
+    >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/agreement_dialog_bg"
+        android:gravity="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="用户协议"
+            android:textColor="@color/colorLightBlue10"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/tv_title"
+            android:background="#c0c0c0" />
+            <TextView
+                android:id="@+id/tv_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_title"
+                android:layout_margin="10dp"
+                android:text="欢迎使用翼天领养软件服务！为使用翼天领养软件及服务，用户应当阅读并遵守《翼天领养软件许可及服务协议》（以下简称“本协议”），以及《翼天领养服务协议》《翼天领养软件许可及服务协议》等相关协议。请用户务必审慎阅读、充分理解各条款内容，特别是免除或者限制责任的条款，以及开通或使用某项服务的单独协议，并选择接受或不接受。限制、免责条款可能以加粗形式提示用户注意。除非用户已阅读并接受本协议所有条款，否则用户无权下载、安装或使用本软件及相关服务。用户的下载、安装、使用、获取翼天领养服务管理帐号及翼天领养最终用户帐号、登录等行为即视为用户已阅读并同意上述协议的约束。如果用户未满18周岁，请在法定监护人的陪同下阅读本协议及其他上述协议，并特别注意未成年人使用条款。"
+                android:scrollbars="vertical"
+                android:textColor="#745340"
+                android:textSize="14sp" />
+            <com.example.midclasswork.ElecSignatureView
+                android:id="@+id/elec"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"/>
+            <Button
+                android:text="Clear"
+                android:onClick="onClear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="@drawable/add_shopping_bt_bg"
+                />
+            <ImageView
+                android:id="@+id/iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:padding="5dp"
+                    android:textSize="18sp"
+                    android:textColor="#745340"
+                    android:text="是否同意："
+
+                    />
+                <RadioGroup
+                    android:id="@+id/check"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    >
+                    <RadioButton
+                        android:id="@+id/yes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#745340"
+                        android:text="是"
+                        />
+                    <RadioButton
+                        android:id="@+id/no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#745340"
+                        android:text="否"
+                        />
+                </RadioGroup>
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
